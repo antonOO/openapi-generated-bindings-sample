@@ -1,0 +1,14 @@
+.openapi-generator-ignore
+README.md
+pom.xml
+src/main/java/org/openapitools/OpenAPI2SpringBoot.java
+src/main/java/org/openapitools/RFC3339DateFormat.java
+src/main/java/org/openapitools/api/ApiUtil.java
+src/main/java/org/openapitools/api/TransactionApi.java
+src/main/java/org/openapitools/api/TransactionApiController.java
+src/main/java/org/openapitools/configuration/HomeController.java
+src/main/java/org/openapitools/configuration/OpenAPIDocumentationConfig.java
+src/main/java/org/openapitools/model/InvalidTransaction.java
+src/main/java/org/openapitools/model/SuccessfulTransactionResp.java
+src/main/java/org/openapitools/model/TransactionReq.java
+src/main/resources/application.properties

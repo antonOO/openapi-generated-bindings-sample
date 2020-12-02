@@ -1,0 +1,55 @@
+openapi: 3.0.0
+servers:
+  - url: http://localhost:8080/test
+    description: Joap server
+info:
+  title: VmodlNs ManagedObject
+  version: vmodl.infra.version.version1
+  description: Joap API
+  contact:
+    name: Georgi Dimitrov
+
+components:
+  schemas:
+    SuccessfulTransactionResp:
+      type: object
+      properties:
+        message:
+          type: string
+      required: [message]
+    TransactionReq:
+      type: object
+      properties:
+        amount:
+          type: integer
+      required: [message]
+    InvalidTransaction:
+      type: object
+      properties:
+        message:
+          type: string
+      required: [message]
+
+paths:
+  /transaction:
+    summary: "VmodlNs selectCommonVersions ManagedMethod"
+    post:
+      requestBody:
+        required: true
+        content:
+          "application/json":
+            schema:
+              $ref: '#/components/schemas/TransactionReq'
+      responses:
+        '200':
+          description: success
+          content:
+            "application/json":
+              schema:
+                $ref: '#/components/schemas/SuccessfulTransactionResp'
+        '400':
+          description: "InvalidTransaction"
+          content:
+            "application/json":
+              schema:
+                $ref: '#/components/schemas/InvalidTransaction'
